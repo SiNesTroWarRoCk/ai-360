@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-
 <body>
 <div class="table-responsive" >
   <table class="table table-striped table-sm" style="width: 30%">
 	<caption>Premier League - Table</caption>
     <thead class="thead-dark">
 		<tr>
-			
 			<th><abbr title="Position">Pos</abbr></th>
 			<th>Team</th>
 			<th><abbr title="Played">Pld</abbr></th>
@@ -36,7 +34,6 @@
 			$json_arr = json_decode($data,true); ?>
 			<tr>
 			<?php foreach($json_arr['standings'][0]['table'] as $standings){?>
-			
 				<?php $position=$standings['position'];?>
 				<td><?php print ($position); ?></td> 
 				<?php $team=$standings['team']['name']; ?>
@@ -52,16 +49,7 @@
 				<?php $points=$standings['points']; ?>
 				<td><?php print ($points)?></td>		
 			</tr>		
-			<?php }?>
-			
-			
-
-		
-
-			
-			
-    
-			
+			<?php }?>			
     </tbody>
   </table>
   </div>
